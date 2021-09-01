@@ -6,7 +6,7 @@ dbstop if error ;
 warning('off');
 
 [vertex,faces]=readOBJ('box.obj');
-BI = [1 4 5];
+BI = [1 4 5 6];
 BC = vertex(BI,:)+rand(length(BI),3);
 
 U = laplacian_surface_editing_3D(vertex,faces,BI,BC);
